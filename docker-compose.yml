@@ -5,6 +5,7 @@ services:
     environment:
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
+    restart: always             # run as a service  
 
   odoo11:
     image: odoo:11.0
@@ -18,3 +19,4 @@ services:
     volumes:
       - ./addons:/mnt/extra-addons
       - ./etc:/etc/odoo
+    restart: always             # run as a service  
